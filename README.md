@@ -1,7 +1,7 @@
 #GetAPet is the final project of Matheus Battisti Node.js course on Udemy.com (https://www.udemy.com/course/nodejs-do-zero-a-maestria-com-diversos-projetos)
 
 <h1> The Project </h1>
-The main objective of the project is to build a site to show Pets that needs to be adopted.<br>
+The main objective of the project is to build a site to show Pets that needs to be adopted and allow user to adopt them.<br>
 If the user wants to adopt a pet he (or she) needs to register (or login) to the system and manifest their intention (schedule a visit).<br>
 Registered users can insert a pet thru a form where they inform: pet name, age, weight and insert photos.<br>
 
