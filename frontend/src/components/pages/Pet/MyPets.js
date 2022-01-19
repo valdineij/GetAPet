@@ -87,12 +87,12 @@ function MyPets() {
                 {pets.length > 0 &&
                     pets.map((pet) => (
                         <div key={pet._id} className={styles.petlist_row}>
-                            {pet.images.length > 0 &&
-                                <RoundedImage
-                                    src={`${process.env.REACT_APP_API}/images/pets/${pet.images[0]}`}
-                                    alt={pet.name}
-                                    width="px75"
-                                />}
+
+                            <RoundedImage
+                                src={`${process.env.REACT_APP_API}/images/pets/${pet.images[0]}`}
+                                alt={pet.name}
+                                width="px75"
+                            />
                             <span className="bold">{pet.name}</span>
                             {/* Create a div to put edit and delete buttoms if isn't adopted */}
                             {/* concludeAdption button is show if there is a adopter */}
@@ -101,6 +101,9 @@ function MyPets() {
                                 {pet.available ? (
                                     <>
                                         {pet.adopter && (
+                                            /*Note a existense of an arrow function on onclick events bellow 
+                                            This is necessary otherwise function will be activate on load 
+                                            this way it will activated just on button click */
                                             <button
                                                 className={styles.conclude_btn}
                                                 onClick={() => {
@@ -110,7 +113,6 @@ function MyPets() {
                                                 Concluir adoção
                                             </button>
                                         )}
-
                                         <Link to={`/pet/edit/${pet._id}`}>Editar</Link>
                                         <button
                                             onClick={() => {
