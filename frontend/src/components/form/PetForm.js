@@ -30,8 +30,6 @@ function PetForm({ handleSubmit, petData, btnText }) {
     }
 
     const submit = (e) => {
-        console.log('submit do petform');
-
         //stop submit
         e.preventDefault()
         //call submit function with pet object as a parameter
