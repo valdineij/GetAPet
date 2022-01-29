@@ -6,6 +6,9 @@ import { useContext } from 'react'
 
 function Navbar() {
     const { authenticated, logout } = useContext(Context)
+    console.log(authenticated);
+    console.log('Ué?');
+
     return (
 
         <nav className={styles.navbar}>
